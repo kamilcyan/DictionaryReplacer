@@ -13,6 +13,7 @@ namespace ConsoleApp1
             Program prog = new Program();
 
             prog.WriteIn();
+            prog.Translate();
 
             Console.ReadLine();
         }
@@ -36,6 +37,22 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("{0}, {1}", kvp.Key, kvp.Value);
             }
+        }
+
+        public void Translate(/*Dictionary<string, string> dict*/)
+        {
+            string input = Console.ReadLine();
+            int first = input.IndexOf(@"\$");
+            int second = input.IndexOf(@"\$");
+
+
+            string splitInput = input.Substring(first, second - first+12);
+
+            Console.WriteLine(splitInput);
+            //foreach (string word in splitInput)
+            //{
+            //    Console.WriteLine(word);
+            //}
         }
     }
 
